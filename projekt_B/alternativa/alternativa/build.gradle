@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'cz.vutbr.feec.utko.bpcmds'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation fileTree(include: ['*.jar'], dir: 'libs')
+	implementation 'org.jcodec:jcodec:0.2.3'
+	implementation 'org.jcodec:jcodec-javase:0.2.3'
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="url_player" method="post" th:action="@{/videolibrary}" th:object="${video}"> <!--https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#creating-a-form-->
+    <label for="url">Adresa:</label><br>
+    <input id = "url" class="url-content" type='text' name = 'URL' th:field="*{URL}"><br>
+    <label for="nazov">Nazev:</label><br>
+    <input type="text" id="nazov" name="nazov" th:field="*{name}">
+    <input id="submit-button" class="url-content" type='submit' value='Odeslat'>
+</form>
+</body>
+</html>
